@@ -4,46 +4,24 @@ Current Version: **0.10.8**
 
 See change log:
 
-<https://github.com/apigee/usergrid-node-module/blob/master/changelog.md>
-
-
-##Comments / Questions
-Please feel free to send comments or questions:
-
-	twitter: @rockerston
-	email: rod at apigee.com
-
-Or just open github issues.  I truly want to know what you think, and will address all suggestions / comments / concerns.
-
-Thank you!
-
-Rod
+<https://github.com/apache/incubator-usergrid/blob/master/sdks/nodejs/changelog.md>
 
 
 ##Overview
-This Node.js module, which simplifies the process of making API calls to App Services from within Node.js, is provided by [Apigee](http://apigee.com) and is available as an open-source project on github.  We welcome your contributions and suggestions. The repository is located here:
+This Node.js module, which simplifies the process of making API calls to Usergrid from within Node.js, is part of the Apache Usergrid project <http://usergrid.incubator.apache.org/>.  We welcome your contributions and suggestions. The official repository is located here:
 
-<https://github.com/apigee/usergrid-node-module>
+<https://github.com/apache/incubator-usergrid/tree/master/sdks/nodejs>
 
 You can download this package here:
 
-* Download as a zip file: <https://github.com/apigee/usergrid-node-module/archive/master.zip>
-* Download as a tar.gz file: <https://github.com/apigee/usergrid-node-module/archive/master.tar.gz>
-
-
-To find out more about Apigee App Services, see:
-
-<http://apigee.com/about/developers>
-
-To view the Apigee App Services documentation, see:
-
-<http://apigee.com/docs/app_services>
+* Download as a zip file: <https://github.com/rodsimpson/usergrid-node-module/archive/master.zip>
+* Download as a tar.gz file: <https://github.com/rodsimpson/usergrid-node-module/archive/master.tar.gz>
 
 
 ##Client side Javascript
 Want to make calls to App Services (Usergrid) client-side? No problem - just head over to the Usergrid Javascript SDK:
 
-<https://github.com/apigee/usergrid-javascript-sdk>
+<https://github.com/apache/incubator-usergrid/tree/master/sdks/html5-javascript>
 
 The syntax for this Node module and the Javascript SDK are almost exactly the same so you can easily transition between them.
 
@@ -83,7 +61,7 @@ If you are ready to use authentication, then create your client this way:
 
 The last two items are optional. The **logging** option will enable console.log output from the client.  The **buildCurl** option will cause cURL equivalent commands of all calls to the API to be displayed in the console.log output.
 
-**Note:** you can find your client secret and client id on the "Properties" page of the [Admin Portal](http://apigee.com/usergrid).
+**Note:** you can find your client secret and client id on the "Properties" page of the [Admin Portal](https://github.com/apache/incubator-usergrid/tree/master/portal).
 
 You are now ready to use the usergrid handle to make calls against the API.
 
@@ -94,7 +72,7 @@ All of the samples provided in this readme file come from unit tests in the test
 
 To run the test file, first do the following:
 
-1. Change the org-name and app-name to point to your Usergrid account.  Log into the [Admin Portal](http://apigee.com/usergrid) to see this information.
+1. Change the org-name and app-name to point to your Usergrid account.  Log into the [Admin Portal](https://github.com/apache/incubator-usergrid/tree/master/portal) to see this information.
 2. Change the client secret and client id
 
 Then run the code:
@@ -524,9 +502,9 @@ You can also remove connections, by using the disconnect method:
 ###To log a user in
 Up to this point, we have shown how you can use the client secret / client id combination to authenticate your calls against the API.  For a server-side Node.js app, this may be all you need.  However, if you do find that your app requires that you authenticate an individual user, you have several options.
 
-The first is to use client-side authentication with Ajax.  If you want to opt for this method, take a look at our Javascript SDK.  The syntax for usage is the same as this Node.js module, so it will be easy to pick up:
+The first is to use client-side authentication with Ajax.  If you want to opt for this method, take a look at the Usergrid Javascript SDK.  The syntax for usage is the same as this Node.js module, so it will be easy to pick up:
 
-<https://github.com/apigee/usergrid-javascript-sdk>
+<https://github.com/apache/incubator-usergrid/tree/master/sdks/html5-javascript>
 
 The other method is to log the user in server-side. When you log a user in, the API will return an OAuth token for you to use for calls to the API on the user's behalf.  Once that token is returned, you can either make a new client just for the user, or change the auth method on the existing client.  These methods are described below:
 
@@ -714,7 +692,7 @@ More information on cURL can be found here:
 ## Contributing
 We welcome your enhancements!
 
-Like [Usergrid](https://github.com/apigee/usergrid-node-module), the Usergrid Javascript SDK is open source and licensed under the Apache License, Version 2.0.
+The Usergrid Node module is open source and licensed under the Apache License, Version 2.0 (<http://usergrid.incubator.apache.org/>).
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -723,14 +701,10 @@ Like [Usergrid](https://github.com/apigee/usergrid-node-module), the Usergrid Ja
 5. Create new Pull Request (make sure you describe what you did and why your mod is needed)
 
 ##More information
-For more information on Apigee App Services, visit <http://apigee.com/about/developers>.
+For more information on Usergrid, see <http://usergrid.incubator.apache.org/>
 
-## Copyright
-Copyright 2013 Apigee Corporation
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## License
+Licensed under the Apache License, Version 2.0. You may obtain a copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>
 
