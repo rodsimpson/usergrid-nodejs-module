@@ -17,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/apigee/usergrid-node-module.git"
+    "url": "git://github.com/rodsimpson/usergrid-node-module.git"
   },
   "bugs": {
-    "url": "http://github.com/apigee/usergrid-node-module.git/issues"
+    "url": "http://usergrid.incubator.apache.org/"
   },
   "keywords": [
     "Node",
@@ -30,8 +30,7 @@
   ],
   "tags": [
     "usergrid",
-    "API",
-    "Apigee"
+    "API"
   ],
   "author": {
     "name": "Rod Simpson",
@@ -40,4 +39,3 @@
   },
   "license": "Apache 2.0"
 }
-
