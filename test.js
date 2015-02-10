@@ -47,6 +47,12 @@ var client = new usergrid.client({
 	buildCurl: true //optional - turn on curl commands, off by default
 });
 
+console.log("NOTE:  This script only works on apps with Sandbox permissions");
+
+if (process.argv[2]) {
+	console.log("Using alternative URL: " + process.argv[2]);
+	client.URI = process.argv[2];
+}
 
 //call the runner function to start the process
 client.logout();

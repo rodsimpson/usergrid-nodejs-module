@@ -1,5 +1,7 @@
 ##Change log
 
+###0.10.10
+- Updated test.js
 
 ###0.10.7
 - Fixed issue where token was appeneded even when no token was present
