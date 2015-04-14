@@ -1,6 +1,6 @@
 ##Version
 
-Current Version: **0.10.8**
+Current Version: **0.10.10**
 
 See change log:
 
