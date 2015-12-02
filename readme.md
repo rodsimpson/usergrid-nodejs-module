@@ -1,13 +1,13 @@
-##Version
+## Version
 
-Current Version: **0.10.8**
+Current Version: **0.10.11**
 
 See change log:
 
 <https://github.com/apache/incubator-usergrid/blob/master/sdks/nodejs/changelog.md>
 
 
-##Overview
+## Overview
 This Node.js module, which simplifies the process of making API calls to Usergrid from within Node.js, is part of the Apache Usergrid project <http://usergrid.incubator.apache.org/>.  We welcome your contributions and suggestions. The official repository is located here:
 
 <https://github.com/apache/incubator-usergrid/tree/master/sdks/nodejs>
@@ -18,7 +18,7 @@ You can download this package here:
 * Download as a tar.gz file: <https://github.com/rodsimpson/usergrid-node-module/archive/master.tar.gz>
 
 
-##Client side Javascript
+## Client side Javascript
 Want to make calls to App Services (Usergrid) client-side? No problem - just head over to the Usergrid Javascript SDK:
 
 <https://github.com/apache/incubator-usergrid/tree/master/sdks/html5-javascript>
@@ -26,13 +26,13 @@ Want to make calls to App Services (Usergrid) client-side? No problem - just hea
 The syntax for this Node module and the Javascript SDK are almost exactly the same so you can easily transition between them.
 
 
-##Installing
+## Installing
 Use npm:
 
 	$ npm install usergrid
 
 
-##Getting started
+## Getting started
 Include the module:
 
 	var usergrid = require('usergrid');
@@ -66,7 +66,7 @@ The last two items are optional. The **logging** option will enable console.log 
 You are now ready to use the usergrid handle to make calls against the API.
 
 
-##About the samples
+## About the samples
 All of the samples provided in this readme file come from unit tests in the test.js which is located in the root of this project.
 
 
@@ -82,13 +82,13 @@ Then run the code:
 The samples in this file will show you the many ways you can use this module.
 
 
-##Entities and Collections
+## Entities and Collections
 Usergrid stores its data as "Entities" in "Collections".  Entities are essentially JSON objects and Collections are just like folders for storing these objects. You can learn more about Entities and Collections in the App Services docs:
 
 <http://apigee.com/docs/usergrid/content/data-model>
 
 
-##Entities
+## Entities
 This module provides an easy way to make new entities. Here is a simple example that shows how to create a new object of type "dogs":
 
 	var options = {
@@ -226,7 +226,7 @@ Alternatively, if you know that you only want to retrieve an existing entity, us
 	});
 
 
-##The Collection object
+## The Collection object
 The Collection object models Collections in the database.  Once you start programming your app, you will likely find that this is the most useful method of interacting with the database.  Creating a collection will automatically populate the object with entities from the collection. The following example shows how to create a Collection object, then how to use entities once the Collection has been populated with entities from the server:
 
 	//options object needs to have the type (which is the collection type)
@@ -274,7 +274,7 @@ You can also add a new entity of the same type to the collection:
 	});
 
 
-##Collection iteration and paging
+## Collection iteration and paging
 The Collection object works in Pages of data.  This means that at any given time, the Collection object will have one page of data loaded.  You can iterate across all the entities in the current page of data by using the following pattern:
 
 	//we got the dogs, now display the Entities:
@@ -351,7 +351,7 @@ Several other convenience methods exist to make working with pages of data easie
 * getEntityByUUID - returns the entity if it is in the current page
 
 
-###Custom Queries
+### Custom Queries
 A custom query allows you to tell the API that you want your results filtered or altered in some way.  To specify that the query results should be ordered by creation date, add the qs parameter to the options object:
 
 	var options = {
@@ -385,7 +385,7 @@ You can find more information on custom queries here:
 <http://apigee.com/docs/usergrid/content/queries-and-parameters>
 
 
-##Modeling users with the Entity object
+## Modeling users with the Entity object
 There is no specific User object in the module.  Instead, you simply need to use the Entity object, specifying a type of "users".  Here is an example:
 
 	//type is 'users', set additional paramaters as needed
@@ -441,7 +441,7 @@ If you no longer need the object, call the delete() method and the object will b
 	});
 
 
-###Making connections
+### Making connections
 Connections are a way to connect to entities with some verb.  This is called an entity relationship.  For example, if you have a user entity with username of marty, and a dog entity with a name of einstein, then using our RESTful API, you could make a call like this:
 
 	POST users/marty/likes/dogs/einstein
@@ -499,7 +499,7 @@ You can also remove connections, by using the disconnect method:
 	});
 
 
-###To log a user in
+### To log a user in
 Up to this point, we have shown how you can use the client secret / client id combination to authenticate your calls against the API.  For a server-side Node.js app, this may be all you need.  However, if you do find that your app requires that you authenticate an individual user, you have several options.
 
 The first is to use client-side authentication with Ajax.  If you want to opt for this method, take a look at the Usergrid Javascript SDK.  The syntax for usage is the same as this Node.js module, so it will be easy to pick up:
@@ -578,7 +578,7 @@ To recap, once a user has been logged in, and an OAuth token has been acquired, 
 Either method will work.
 
 
-###To log a user out
+### To log a user out
 To log the user out, call:
 
 	client.logout();
@@ -589,10 +589,10 @@ Or, if you made a new client object specifically for the app user:
 
 This destroys the token and user object in the client object, effectively logging the user out.
 
-##Groups
+## Groups
 This module provides an easy way to make new groups. They follow the same syntax as Entities
 
-##Making generic calls
+## Making generic calls
 If you find that you need to make calls to the API that fall outside of the scope of the Entity and Collection objects, you can use the following format to make any REST calls against the API:
 
 	client.request(options, callback);
@@ -671,7 +671,7 @@ The Options Object for the client.request fuction:
 You can make any call to the API using the format above.  However, in practice using the higher level Entity and Collection objects will make life easier as they take care of much of the heavy lifting.
 
 
-###cURL
+### cURL
 [cURL](http://curl.haxx.se/) is an excellent way to make calls directly against the API. As mentioned in the **Getting started** section of this guide, one of the parameters you can add to the new client options object is **buildCurl**:
 
 	var client = new Usergrid.Client({
@@ -700,7 +700,7 @@ The Usergrid Node module is open source and licensed under the Apache License, V
 4. Push your changes to the upstream branch (`git push origin my-new-feature`)
 5. Create new Pull Request (make sure you describe what you did and why your mod is needed)
 
-##More information
+## More information
 For more information on Usergrid, see <http://usergrid.incubator.apache.org/>
 
 ## License
